@@ -22,11 +22,7 @@ Pick one.
 
 **OAuth (default, no key in any file).** The manifests in this repo add the server by URL only. On first use the client gets a `401` that points to the server's OAuth metadata, registers itself (dynamic client registration), and opens a browser sign-in to your AI/ML API account (PKCE). Scopes: `openid email offline_access mcp:invoke`.
 
-**API key.** Create a key at https://aimlapi.com/app/keys, export it as `AIMLAPI_API_KEY`, and add the server with an `Authorization` header (commands below). The commands keep the literal text `${AIMLAPI_API_KEY}` in the config file, and the client reads the key from the environment at start-up, so the key is not written to disk. When the header is set, no OAuth sign-in happens.
-
-```bash
-export AIMLAPI_API_KEY=your-key
-```
+**API key.** Create a key at https://aimlapi.com/app/keys and add the server with an `Authorization` header (commands below). Replace `YOUR_AIMLAPI_API_KEY` with your key, and do not commit a config file that contains it. When the header is set, no OAuth sign-in happens.
 
 ## Claude Code
 
@@ -42,7 +38,7 @@ Then run `/mcp` in Claude Code, select `plugin:aimlapi:aimlapi` and choose **Aut
 API key instead of the plugin:
 
 ```bash
-claude mcp add-json -s user aimlapi '{"type":"http","url":"https://mcp.aimlapi.com/mcp","headers":{"Authorization":"Bearer ${AIMLAPI_API_KEY}"}}'
+claude mcp add-json -s user aimlapi '{"type":"http","url":"https://mcp.aimlapi.com/mcp","headers":{"Authorization":"Bearer YOUR_AIMLAPI_API_KEY"}}'
 ```
 
 Use one or the other. When a server with the same URL is configured by hand, Claude Code hides the plugin's copy.
@@ -60,7 +56,7 @@ Then run `/mcp auth aimlapi` in Gemini CLI.
 API key:
 
 ```bash
-gemini mcp add -s user -t http -H 'Authorization: Bearer ${AIMLAPI_API_KEY}' aimlapi https://mcp.aimlapi.com/mcp
+gemini mcp add -s user -t http -H 'Authorization: Bearer YOUR_AIMLAPI_API_KEY' aimlapi https://mcp.aimlapi.com/mcp
 ```
 
 ## Qwen Code
@@ -76,7 +72,7 @@ Then run `/mcp` in Qwen Code and authenticate `aimlapi`. Installing with the pla
 API key:
 
 ```bash
-qwen mcp add -s user --transport http -H 'Authorization: Bearer ${AIMLAPI_API_KEY}' aimlapi https://mcp.aimlapi.com/mcp
+qwen mcp add -s user --transport http -H 'Authorization: Bearer YOUR_AIMLAPI_API_KEY' aimlapi https://mcp.aimlapi.com/mcp
 ```
 
 ## Qoder CLI
@@ -91,7 +87,7 @@ qoder plugins install aimlapi@aimlapi
 API key:
 
 ```bash
-qoder mcp add -s user --transport http aimlapi https://mcp.aimlapi.com/mcp -H 'Authorization: Bearer ${AIMLAPI_API_KEY}'
+qoder mcp add -s user --transport http aimlapi https://mcp.aimlapi.com/mcp -H 'Authorization: Bearer YOUR_AIMLAPI_API_KEY'
 ```
 
 ## Cline and other clients
