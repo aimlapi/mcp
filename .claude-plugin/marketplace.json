@@ -1,0 +1,27 @@
+{
+  "name": "aimlapi",
+  "owner": {
+    "name": "AI/ML API",
+    "email": "help@aimlapi.com",
+    "url": "https://aimlapi.com"
+  },
+  "metadata": {
+    "description": "Official AI/ML API plugins."
+  },
+  "plugins": [
+    {
+      "name": "aimlapi",
+      "source": "./",
+      "description": "Find and compare AI models, run chat, embeddings, image, video and audio generation, and call Agent Tools such as web search and page extraction.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI/ML API",
+        "url": "https://aimlapi.com"
+      },
+      "homepage": "https://docs.aimlapi.com/quickstart/mcp",
+      "repository": "https://github.com/aimlapi/mcp",
+      "license": "Apache-2.0",
+      "category": "development"
+    }
+  ]
+}

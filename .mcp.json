@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "aimlapi": {
+      "type": "http",
+      "url": "https://mcp.aimlapi.com/mcp"
+    }
+  }
+}

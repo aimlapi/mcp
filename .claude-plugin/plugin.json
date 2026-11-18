@@ -1,0 +1,29 @@
+{
+  "name": "aimlapi",
+  "version": "1.0.0",
+  "description": "Find and compare AI models, run chat, embeddings, image, video and audio generation, and call Agent Tools such as web search and page extraction.",
+  "author": {
+    "name": "AI/ML API",
+    "email": "help@aimlapi.com",
+    "url": "https://aimlapi.com"
+  },
+  "homepage": "https://docs.aimlapi.com/quickstart/mcp",
+  "repository": "https://github.com/aimlapi/mcp",
+  "license": "Apache-2.0",
+  "privacyPolicyUrl": "https://aimlapi.com/privacy-policy",
+  "keywords": [
+    "mcp",
+    "aimlapi",
+    "llm",
+    "image-generation",
+    "video-generation",
+    "embeddings",
+    "web-search"
+  ],
+  "mcpServers": {
+    "aimlapi": {
+      "type": "http",
+      "url": "https://mcp.aimlapi.com/mcp"
+    }
+  }
+}
