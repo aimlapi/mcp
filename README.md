@@ -1,6 +1,6 @@
 # AI/ML API MCP server
 
-Find and compare AI models, run chat, embeddings, image, video and audio generation, and call Agent Tools such as web search and page extraction.
+Search, compare and call 10,000+ AI models and tools from your coding agent: chat, embeddings, image, video and audio generation, OCR, and Agent Tools such as web search and page extraction.
 
 This repository holds install manifests only. The server is hosted by AI/ML API; there is no server code here and nothing to build or run locally.
 
