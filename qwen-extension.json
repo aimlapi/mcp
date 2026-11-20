@@ -1,7 +1,7 @@
 {
   "name": "aimlapi",
   "version": "1.0.0",
-  "description": "Find and compare AI models, run chat, embeddings, image, video and audio generation, and call Agent Tools such as web search and page extraction.",
+  "description": "Search, compare and call 10,000+ AI models and tools from your coding agent: chat, embeddings, image, video and audio generation, OCR, and Agent Tools such as web search and page extraction.",
   "mcpServers": {
     "aimlapi": {
       "httpUrl": "https://mcp.aimlapi.com/mcp"
